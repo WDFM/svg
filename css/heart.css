@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgba(24, 21, 24, 0.8);
+  overflow: hidden;
+}
+@keyframes bodyGo {
+  0% {}
+  100% {
+    background: #fff;
+  }
+}
+#go {
+  position: relative;
+  width: 100%;
+  background: #fff;
+}
+#click {
+  position: absolute;
+  display: block;
+  bottom: 450px;
+  left: 50%;
+  margin-left: -203px;
+  cursor: pointer;
+}
+#xyy {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 50%;
+  margin-left: -95px;
+  width: 180px;
+  height: 340px;
+}
+#head {
+  position: absolute;
+  top: 0;
+  animation: xyyGo 3s ease-out infinite;
+  z-index: -1;
+}
+@keyframes xyyGo {
+  0% {}
+  25% {
+    transform: rotate(10deg) translate(5px,0px);
+  }
+  50% {
+    transform: rotate(0deg) translate(0px,0px);
+  }
+  50% {
+    transform: rotate(-10deg) translate(-5px,4px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px,0px);
+  }
+}
+#img1 {
+        animation: img1 0.3s infinite;
+      }
+#img2 {
+  animation: img2 0.5s 0.5s infinite;
+}
+
+#img3 {
+  animation: img3 0.5s 1s infinite;
+  transition: all 0.5s;
+}
+
+@keyframes img1 {
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes img2 {
+  50% {
+    transform: translateY(-1rem) scale(1.03);
+  }
+  100% {
+    transform: translateY(0rem) scale(1);
+  }
+}
+
+@keyframes img3 {
+  10% {
+    transform: skewY(10deg);
+  }
+}
+
+
+.heart {
+  position: relative;
+  display: none;
+}
+
+#heart {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 0 600;
+  stroke-dashoffset: 160;
+}
+@keyframes myHeart {
+  0% {}
+  100% {
+    stroke-dasharray: 100 0;
+    stroke-dashoffset: 100;
+    stroke: rgba(255, 255, 255, 0);
+    fill: rgba(246, 36, 22, 0.77);
+  }
+}
+
+#i1, #i2, #i3 {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 100 300;
+  stroke-dashoffset: 160;
+}
+@keyframes iGo {
+  0% {}
+  100% {
+    stroke-width: 10;
+    stroke-dasharray: 100 0;
+    stroke-dashoffset: 100;
+    stroke: rgba(6, 233, 255, 0.7);
+  }
+}
+
+#u1, #u2, #u3 {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 0 300;
+  stroke-dashoffset: 160;
+}
+@keyframes uGo {
+  0% {}
+  100% {
+    stroke-width: 10;
+    stroke-dasharray: 100 0;
+    stroke-dashoffset: 100;
+    stroke: rgba(51, 255, 0, 0.8);
+  }
+}

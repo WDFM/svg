@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style rel="stylesheet">
+      #wrap {
+        position: relative;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 50px;
+      }
+      button {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        top: 0;
+        border: none;
+        background: transparent;
+        color: #333;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      button:focus {
+        outline: none;
+      }
+      #rect {
+        fill:transparent;
+        stroke-width: 4;
+        stroke: #333;
+        stroke-dasharray:100 520;
+        stroke-dashoffset:-150;
+      }
+      button:hover {
+        transition: all 0.3s;
+        color: rgb(230, 108, 31);
+      }
+      #wrap:hover #rect {
+        animation: go 0.3s linear forwards;
+        -webkit-animation: go 0.3s linear forwards;
+      }
+      @keyframes go {
+        0% {
+          stroke-width: 4;
+          stroke-dasharray:100 520;
+          stroke-dashoffset:-150;
+        }
+        100% {
+          stroke-width: 2;
+          stroke-dasharray: 300;
+          stroke-dashoffset: 0;
+          stroke: rgb(230, 108, 31);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <svg viewBox="0 0 100 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <rect id="rect" width="100" height="50" /></rect>
+      </svg>
+      <button type="button" name="button">go</button>
+    </div>
+  </body>
+</html>

@@ -11,11 +11,11 @@ function go() {
     document.getElementById('i1').style.animation = "iGo 5s ease-out forwards";
     document.getElementById('i2').style.animation = "iGo 5s ease-out forwards";
     document.getElementById('i3').style.animation = "iGo 5s ease-out forwards";
-    body[0].style.animation = "bodyGo 5s forwards";
   },1000);
 
   setTimeout(function(){
     document.getElementById('heart').style.animation = "myHeart 5s ease-out forwards";
+    body[0].style.animation = "bodyGo 5s forwards";
   },4000);
 
   setTimeout(function(){

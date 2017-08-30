@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/heart.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrap">
-      <div id="go">
-        <div src="img/xyy.png" alt="" id="xyy">
-          <img src="img/xyy_head.png" alt="" id="head">
-          <img src="img/xyy_body.png" alt="" id="body">
+        <div id="go">
+            <p id="click" onclick="go()">
+                <img src="img/click_1.png" alt="" id="img1">
+                <img src="img/click_2.png" alt="" id="img2">
+                <img src="img/click_3.png" alt="" id="img3">
+            </p>
+            <div src="img/xyy.png" alt="" id="xyy">
+                <img src="img/xyy_head.png" alt="" id="head">
+                <img src="img/xyy_body.png" alt="" id="body">
+            </div>
         </div>
-        <p id="click" onclick="go()">
-          <img src="img/click_1.png" alt="" id="img1">
-          <img src="img/click_2.png" alt="" id="img2">
-          <img src="img/click_3.png" alt="" id="img3">
-        </p>
-      </div>
-      <div class="heart" id="show">
-        <svg viewBox="0 0 600 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <div class="heart" id="show">
+            <svg viewBox="0 0 600 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 55 L100 50" id="i1" />
+                <path d="M75 50 L75 180" id="i2" />
+                <path d="M50 175 L100 175" id="i3" />
+                <path d="M300 100
+          C220 50, 240 160, 320 180, 320 155, 340 155, 347 120, 350 100, 350 60, 300 100 Z" id="heart" />
+                <path d="M430 55 L470 55" id="u1" />
+                <path d="M530 55 L570 55" id="u2" />
+                <path d="M450 50 L450 130
+          C450 160, 500 180, 530 160 L550 130 L550 50" id="u3" />
+            </svg>
+        </div>
+        <script src="js/heart.js" charset="utf-8"></script>
+</body>
 
-          <path d="M50 55 L100 50" id="i1"/>
-          <path d="M75 50 L75 180" id="i2"/>
-          <path d="M50 175 L100 175" id="i3"/>
-
-          <path d="M300 100
-          C220 50, 240 160, 320 180, 320 155, 340 155, 347 120, 350 100, 350 60, 300 100 Z"
-          id="heart"/>
-
-          <path d="M430 55 L470 55" id="u1"/>
-          <path d="M530 55 L570 55" id="u2"/>
-          <path d="M450 50 L450 130
-          C450 160, 500 180, 530 160 L550 130 L550 50"
-          id="u3"/>
-        </svg>
-      </div>
-    </div>
-
-    <script src="js/heart.js" charset="utf-8"></script>
-  </body>
 </html>

@@ -59,11 +59,19 @@
 	        	<polygon points="0 0 5 50 -5 50" fill="url(#tower)"></polygon>
 	        	<ellipse cx="0" cy="0" rx="300" ry="100" fill="url(#light)" clip-path="url(#light-clip)"></ellipse>
 	        </g>
+	        <line x1="-900" y1="50" x2="1600" y2="50" stroke="lightgray" stroke-width="1"></line>
         </g>
-        <g id="reflact" transform="translate(0 50)">
-        	<mask></mask>
+        <g id="reflact" transform="translate(0 50)" mask="url(#fading)">
+        	<defs>
+	        	<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+	        		<stop offset="0" stop-color="rgba(255,255,255,0.3)"></stop>
+	        		<stop offset="0.5" stop-color="rgba(255,255,255,0)"></stop>
+	        	</linearGradient>
+				<mask id="fading">
+	        		<rect x="-800" y="0" width="1600" height="800" fill="url(#fade)"></rect>
+	        	</mask>
+	        </defs>
         	<use xlink:href="#real" transform="scale(1,-1) translate(0 -50)"></use>
-        	<rect x="-800" y="0" width="1600" height="800" fill="rgba(255,255,255,.5)"></rect>
         </g>
     </svg>
 

@@ -1,2 +1,2 @@
 # svg
-Just Some SVG. 
+SVGs that I've learnt.

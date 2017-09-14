@@ -3,12 +3,52 @@
 <head>
 <meta charset="utf-8">
 	<title>Gether</title>
+	<style type="text/css">
+		html,body,svg {
+			width: 100%;
+			height:100%;
+			margin: 0;
+			padding: 0;
+		}
+		text {
+			transition: all 1s;
+		}
+	</style>
 </head>
 <body>
 	<svg xmlns="http://www.w3.org/2000/svg">
 		<text id="text" x="100" y="100" style="font-size: 18px;color: #4c4c4c;">
-			WDFM&XYYWDFM&XYYWDFM&XYY
+			WDFM&XYY
 		</text>
 	</svg>
+	<button type="button" onclick="go()">click</button>
+
+	<script type="text/javascript">
+		var words = document.getElementById('text');
+		var forDx = [];
+		var forDy = [];
+
+		function gether(){
+			words.setAttribute('dx','20');
+			words.setAttribute('dy','20');
+		};
+		function getD(){
+			for (let i = 0; i < 8; ++ i){
+				let dx = Math.round(Math.random() * i * 10 + 20);
+				forDx.push(dx);
+			};
+			words.setAttribute('dx',forDx.join(" "));
+			for (let i = 0; i < 8; ++i){
+				let dy = Math.round(Math.random() * i * 10 + 20);
+				forDy.push(dy);
+			};
+			words.setAttribute('dy',forDy.join(' '));
+		};
+		getD();
+
+		function go(){
+			gether();
+		}
+	</script>
 </body>
 </html>
